@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
 
         Vector3 horizontalSpeed = new Vector3(_lastVelocity.x, 0, _lastVelocity.z);
-        _animator.SetFloat("speed", horizontalSpeed.magnitude);
+        
     }
 
     private void Move()
