@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
+        
 
         Move();
 
@@ -48,13 +48,10 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y = GetGravity();
 
-        Vector3 previousdirection = new Vector3(0, 0, 0);
+        Vector3 playerRotation = transform.rotation.eulerAngles;
+        playerRotation.y = 0;
+        transform.rotation = Quaternion.Euler(playerRotation);
 
-        if (direction != previousdirection)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(previousdirection);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
-        }
         if (_characterController.isGrounded)
         {
             velocity.y = GetGravity(); 
