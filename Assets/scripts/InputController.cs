@@ -9,7 +9,9 @@ public class InputController : MonoBehaviour
 
     public Vector2 Move => movementInput;
     private bool _jump;
+    private bool _slide;
     public bool Jump => _jump;
+    public bool Slide => _slide;
 
     private void OnMove(InputValue value)
     {
@@ -22,10 +24,16 @@ public class InputController : MonoBehaviour
     {
         _jump = true;
     }
+    private void OnSlide()
+    {
+        _slide = true;
+    }
+    
 
     private void LateUpdate()
     {
         _jump = false;
+        _slide = false;
         if (movementInput.magnitude == 0)
         {
             movementInput = Vector2.zero;

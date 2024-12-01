@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     InputController _input;
     public float Speed = 5f;
     public float jumpSpeed = 5f;
+    public float slideSpeed = 2f;
     private Vector3 _lastVelocity;
 
  
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
         _lastVelocity = Vector3.zero;
         _animator.SetBool("Jump", false);
+        _animator.SetBool("Slide", false);
     }
 
     void Update()
@@ -54,19 +56,26 @@ public class PlayerMovement : MonoBehaviour
 
         if (_characterController.isGrounded)
         {
-            velocity.y = GetGravity(); 
+            velocity.y = GetGravity();
+            if (ShouldSlide())
+            {
+                velocity.z = slideSpeed;
+                _animator.SetBool("Slide", true);
+            }
             if (ShouldJump())
             {
                 velocity.y = jumpSpeed;
                 _animator.SetBool("Jump", true);
             }
         }
+        
         else
         {
             velocity.y = _lastVelocity.y + Physics.gravity.y * Time.deltaTime;
             _animator.SetBool("Jump", false);
+            _animator.SetBool("Slide", false);
+           
         }
-
 
 
         _characterController.Move(velocity * Time.deltaTime);
@@ -74,7 +83,10 @@ public class PlayerMovement : MonoBehaviour
 
         _lastVelocity = velocity;
 
-
+    }
+    private bool ShouldSlide()
+    {
+        return _input.Slide;
     }
 
     private bool ShouldJump()
