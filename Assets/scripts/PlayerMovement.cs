@@ -59,7 +59,8 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = GetGravity();
             if (ShouldSlide())
             {
-                velocity.z = slideSpeed;
+                velocity.y = slideSpeed;
+             
                 _animator.SetBool("Slide", true);
             }
             if (ShouldJump())
@@ -74,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = _lastVelocity.y + Physics.gravity.y * Time.deltaTime;
             _animator.SetBool("Jump", false);
             _animator.SetBool("Slide", false);
+            
            
         }
 
