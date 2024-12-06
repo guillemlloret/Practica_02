@@ -12,10 +12,11 @@ public class PlayerMovement : MonoBehaviour
     public float slideSpeed = 2f;
     private Vector3 _lastVelocity;
 
+    public Animator _animatorSkin;
  
     public Transform cameraTransform;
 
-    Animator _animator;
+    public Animator _animator;
     private bool isRunning = false;
     void Start()
     {
@@ -25,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
         _lastVelocity = Vector3.zero;
         _animator.SetBool("Jump", false);
         _animator.SetBool("Slide", false);
+        _animatorSkin.SetBool("Vanish", false) ;
+
+      
     }
 
     void Update()
@@ -35,7 +39,9 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 horizontalSpeed = new Vector3(_lastVelocity.x, 0, _lastVelocity.z);
         
+        
     }
+ 
 
     private void Move()
     {
@@ -62,11 +68,17 @@ public class PlayerMovement : MonoBehaviour
                 velocity.y = slideSpeed;
              
                 _animator.SetBool("Slide", true);
+               
             }
             if (ShouldJump())
             {
                 velocity.y = jumpSpeed;
                 _animator.SetBool("Jump", true);
+            }
+
+            if (ShouldVanish())
+            {
+                _animatorSkin.SetBool("Vanish",true);
             }
         }
         
@@ -75,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = _lastVelocity.y + Physics.gravity.y * Time.deltaTime;
             _animator.SetBool("Jump", false);
             _animator.SetBool("Slide", false);
+            _animator.SetBool("Vanish", false );
             
            
         }
@@ -94,6 +107,11 @@ public class PlayerMovement : MonoBehaviour
     private bool ShouldJump()
     {
         return _input.Jump && _characterController.isGrounded;
+    }
+
+    private bool ShouldVanish()
+    {
+        return _input.Vanish && _characterController.isGrounded;
     }
     private float GetGravity()
     {
