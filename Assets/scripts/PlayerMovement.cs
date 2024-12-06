@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = _lastVelocity.y + Physics.gravity.y * Time.deltaTime;
             _animator.SetBool("Jump", false);
             _animator.SetBool("Slide", false);
-            _animator.SetBool("Vanish", false );
+            _animatorSkin.SetBool("Vanish", false );
             
            
         }
@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool ShouldVanish()
     {
-        return _input.Vanish && _characterController.isGrounded;
+        return _input.Vanish;
     }
     private float GetGravity()
     {
