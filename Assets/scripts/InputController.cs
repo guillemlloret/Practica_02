@@ -33,6 +33,7 @@ public class InputController : MonoBehaviour
     private void OnVanish()
     {
         _vanish = true;
+        Debug.Log("vanish");
     }
     
 
