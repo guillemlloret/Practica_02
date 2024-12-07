@@ -9,13 +9,12 @@ public class DamageDealer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-      
-   
-        ITakeDamage[] damageTakers =
-            collision.collider.GetComponents<ITakeDamage>();
+
+        ITakeDamage[] damageTakers = collision.collider.GetComponents<ITakeDamage>();
 
         if (damageTakers != null)
         {
+            Debug.Log("xoc");
             foreach (var item in damageTakers)
             {
                 item.TakeDamage(Damage);
