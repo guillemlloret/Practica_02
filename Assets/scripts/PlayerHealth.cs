@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour, ITakeDamage
     {
         _currentHealth -= amount;
         Debug.Log("mal" + _currentHealth);
-        GetComponent<Renderer>().material.color = Color.red;
+        //GetComponent<Renderer>().material.color = Color.red;
 
         OnDamage?.Invoke(_currentHealth / _maxHealth);
 
