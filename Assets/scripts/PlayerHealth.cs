@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, ITakeDamage
 {
-    private float _currentHealth;
+    public float _currentHealth;
     private float _maxHealth = 100;
 
     public static Action OnDeath;
@@ -19,7 +19,8 @@ public class PlayerHealth : MonoBehaviour, ITakeDamage
     {
         _currentHealth -= amount;
         Debug.Log("mal" + _currentHealth);
-        GetComponent<Renderer>().material.color = Color.red;
+
+      
 
         OnDamage?.Invoke(_currentHealth / _maxHealth);
 
