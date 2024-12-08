@@ -5,6 +5,8 @@ using UnityEngine;
 public class TurretAI : MonoBehaviour
 {
     public Transform player; 
+    //public GameObject player;
+   
     public float detectionRange; 
     private bool isEngagingPlayer = false; 
     public float rotationSpeed = 5f; 
@@ -12,7 +14,7 @@ public class TurretAI : MonoBehaviour
     public LineRenderer lineRenderer; 
     public Color laserColor = Color.red; 
     public float laserWidth = 0.05f; 
-    public float damagePerSecond = 10f; 
+    public float damagePerSecond = 10f;
 
     private PlayerHealth playerHealth; 
 
@@ -20,12 +22,15 @@ public class TurretAI : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         
         lineRenderer.startWidth = laserWidth;
         lineRenderer.endWidth = laserWidth;
         lineRenderer.material = new Material(Shader.Find("Unlit/Color"));
         lineRenderer.material.color = laserColor;
-        lineRenderer.enabled = false; 
+        lineRenderer.enabled = false;
+
+       
 
        
         if (turretSound == null)
@@ -63,7 +68,9 @@ public class TurretAI : MonoBehaviour
                 
                 if (playerHealth != null)
                 {
-                    playerHealth.TakeDamage(damagePerSecond * Time.deltaTime);
+              
+                        playerHealth.TakeDamage(damagePerSecond * Time.deltaTime);
+                    
                 }
             }
             else

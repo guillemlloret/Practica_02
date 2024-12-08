@@ -11,9 +11,12 @@ public class InputController : MonoBehaviour
     private bool _jump;
     private bool _slide;
     private bool _vanish;
+    private bool _IsVanish;
     public bool Jump => _jump;
     public bool Slide => _slide;
     public bool Vanish => _vanish;
+    public bool IsVanish => _IsVanish;
+    
 
     private void OnMove(InputValue value)
     {
@@ -33,6 +36,7 @@ public class InputController : MonoBehaviour
     private void OnVanish()
     {
         _vanish = true;
+       
         Debug.Log("vanish");
     }
     

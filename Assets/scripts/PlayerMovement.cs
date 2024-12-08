@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform cameraTransform;
 
     public Animator _animator;
-    private bool isRunning = false;
+    
     void Start()
     {
         _characterController = GetComponent<CharacterController>();

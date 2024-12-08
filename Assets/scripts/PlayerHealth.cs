@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour, ITakeDamage
 {
     public float _currentHealth;
-    private float _maxHealth =23;
+    private float _maxHealth = 150;
 
     public static Action OnDeath;
     public static Action<float> OnDamage;
