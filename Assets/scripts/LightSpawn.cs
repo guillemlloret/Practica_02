@@ -6,7 +6,7 @@ public class LightManager : MonoBehaviour
 {
     public GameObject lightPrefab; // Prefab de la llum
     public Transform player; // Transform del jugador
-    public int numberOfLights = 10; // Quantitat de llums a generar
+    public int numberOfLights = 7; // Quantitat de llums a generar
     public float minY = 0f; // Mínima posició Y
     public float maxY = 5f; // Màxima posició Y
     public float minZ = 10f; // Mínima posició Z
