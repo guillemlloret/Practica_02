@@ -15,7 +15,7 @@ public class SectionTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Trigger"))
         {
-            if (player._currentHealth < 50)
+            if (player._currentHealth < 50 && player._currentHealth >25)
             {
                 Debug.Log("sota 50");
                 stepCount += 1;
@@ -23,6 +23,7 @@ public class SectionTrigger : MonoBehaviour
             }
             else if (player._currentHealth < 25)
             {
+                Debug.Log("per sota 25");
                 stepCount += 1;
                 Instantiate(roadSection3, new Vector3(0, 5, moveStep * stepCount), Quaternion.identity);
             }
