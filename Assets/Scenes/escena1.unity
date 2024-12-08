@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11502361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1785995161008041721, guid: 274210c1503faf44fb0a413c1416cb74,
+    type: 3}
+  m_PrefabInstance: {fileID: 7923211059963720808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &21503947
 GameObject:
   m_ObjectHideFlags: 0
@@ -5736,12 +5742,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197336053}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.3545127, y: -5.453988, z: 190.6}
   m_LocalScale: {x: 156.39606, y: 0.084012136, z: 1666.5536}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1684988872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!218 &197336058
 Terrain:
@@ -16688,11 +16694,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveStep: 84
   stepCount: 0
-  roadSection: {fileID: 1785995161008041721, guid: 274210c1503faf44fb0a413c1416cb74,
+  roadSection: {fileID: 11502361}
+  roadSection2: {fileID: 5686255585635289475, guid: c70bd0fdff9f25f4d979ea986b990156,
     type: 3}
-  roadSection2: {fileID: 1827054111111033893, guid: 9c11f2831c725dc459544bb492c16f12,
-    type: 3}
-  roadSection3: {fileID: 1474115805143737973, guid: c90e90447814d21419f5273f8c6cfef0,
+  roadSection3: {fileID: 3415168098954567399, guid: ac938f0fd5407244eafd9a27426fb1b8,
     type: 3}
   player: {fileID: 783405148}
 --- !u!54 &783405150
@@ -22803,7 +22808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.83931327, g: 0.69166076, b: 0.9339623, a: 1}
+  m_Color: {r: 0.68301225, g: 0.25616938, b: 0.7584905, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -28333,6 +28338,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ciutat (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1785995161008041721, guid: 274210c1503faf44fb0a413c1416cb74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2007437255463658504, guid: 274210c1503faf44fb0a413c1416cb74,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -28404,6 +28414,10 @@ PrefabInstance:
         type: 3}
       insertIndex: 13
       addedObject: {fileID: 445569061}
+    - targetCorrespondingSourceObject: {fileID: 3242173349858022584, guid: 274210c1503faf44fb0a413c1416cb74,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 197336057}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 274210c1503faf44fb0a413c1416cb74, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -28413,7 +28427,6 @@ SceneRoots:
   - {fileID: 1552452242}
   - {fileID: 758734976}
   - {fileID: 37067532}
-  - {fileID: 197336057}
   - {fileID: 1759712293}
   - {fileID: 632241992}
   - {fileID: 795532757}
