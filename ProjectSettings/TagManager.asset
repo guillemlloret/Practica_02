@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trigger
   - skin
+  - Chip
   layers:
   - Default
   - TransparentFX

@@ -38,15 +38,28 @@ public class InputController : MonoBehaviour
     }
     private void OnVanish()
     {
+       
         if (_canVanish)
         {
-            _vanish = true;
+            _vanish = !_vanish; 
+            
+        }
+        else
+        {
+            Debug.Log("Player cannot vanish yet.");
+        }
+        _canVanish = false;
+    }
 
-            Debug.Log("vanish");
+    private void OnTriggerEnter(Collider other)
+    {
+     
+        if (other.CompareTag("Chip"))
+        {
+            _canVanish = true;
+            Debug.Log("Player can now vanish.");
         }
     }
-    
-
     private void LateUpdate()
     {
         _jump = false;
@@ -59,4 +72,9 @@ public class InputController : MonoBehaviour
     }
 
 }
+
+
+
+
+
 
