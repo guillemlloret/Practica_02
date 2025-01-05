@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TurretAI : MonoBehaviour
 {
-    public Transform player; 
+    public Transform player;
+    public GameObject skin;
     //public GameObject player;
    
     public float detectionRange; 
@@ -23,7 +24,8 @@ public class TurretAI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        
+        skin = GameObject.FindGameObjectWithTag("skin");
+
         lineRenderer.startWidth = laserWidth;
         lineRenderer.endWidth = laserWidth;
         lineRenderer.material = new Material(Shader.Find("Unlit/Color"));
@@ -45,7 +47,7 @@ public class TurretAI : MonoBehaviour
         {
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-            if (distanceToPlayer <= detectionRange && player.GetComponent <Invisibility>().IsVisible)
+            if (distanceToPlayer <= detectionRange && skin.GetComponent<Invisibility>().IsVisible)
             {
                 
                 if (!isEngagingPlayer)

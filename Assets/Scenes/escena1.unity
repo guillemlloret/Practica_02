@@ -7539,6 +7539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6664839552874652836, guid: 0f9f0d44ae134e94199024bc8b6d3ead,
         type: 3}
+      propertyPath: m_TagString
+      value: skin
+      objectReference: {fileID: 0}
+    - target: {fileID: -6664839552874652836, guid: 0f9f0d44ae134e94199024bc8b6d3ead,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -22325,6 +22330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962582635}
   - component: {fileID: 962582636}
+  - component: {fileID: 962582637}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -22369,6 +22375,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &962582637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962582634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0392137657ac6c34193ba25aa87309e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsVisible: 0
 --- !u!1 &968367890
 GameObject:
   m_ObjectHideFlags: 0
@@ -23935,7 +23954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0392137657ac6c34193ba25aa87309e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsVisible: 1
+  IsVisible: 0
 --- !u!1 &1327626248
 GameObject:
   m_ObjectHideFlags: 0
@@ -28061,6 +28080,11 @@ PrefabInstance:
       propertyPath: soundSource
       value: 
       objectReference: {fileID: 1973991002}
+    - target: {fileID: 205117555169131829, guid: b66a9591343c09f41afa73875960a7c1,
+        type: 3}
+      propertyPath: skin
+      value: 
+      objectReference: {fileID: 1262420663}
     - target: {fileID: 205117555169131829, guid: b66a9591343c09f41afa73875960a7c1,
         type: 3}
       propertyPath: player
