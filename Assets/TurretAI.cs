@@ -45,7 +45,7 @@ public class TurretAI : MonoBehaviour
         {
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-            if (distanceToPlayer <= detectionRange)
+            if (distanceToPlayer <= detectionRange && player.GetComponent <Invisibility>().IsVisible)
             {
                 
                 if (!isEngagingPlayer)
