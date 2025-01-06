@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2385628198	FootSteps			\Default Work Unit\FootSteps	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3865314626	Material			\Default Work Unit\Material	
+
+Switch	ID	Name	Switch Group			Notes
+	841620460	Concrete	Material			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	72997736	BAS_Player_Footstep_stone_run_04	C:\Users\jaume\OneDrive\Documentos\GitHub\Practica_02\Practica_02_WwiseProject\.cache\D9\{D96A6D05-16DC-2C3C-4862-B37CDB50838B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footseps\Footsteps_SFX\BAS_Player_Footstep_stone_run_04		26120
+	363988418	BAS_Player_Footstep_stone_run_06	C:\Users\jaume\OneDrive\Documentos\GitHub\Practica_02\Practica_02_WwiseProject\.cache\97\{97333E24-88AA-7628-E19B-1A7F8CB4A242}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footseps\Footsteps_SFX\BAS_Player_Footstep_stone_run_06		25928
+	497032669	BAS_Player_Footstep_stone_run_01	C:\Users\jaume\OneDrive\Documentos\GitHub\Practica_02\Practica_02_WwiseProject\.cache\96\{96B36AAC-86F1-67EE-456B-50B5F3432F36}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footseps\Footsteps_SFX\BAS_Player_Footstep_stone_run_01		26756
+	607709096	BAS_Player_Footstep_stone_run_03	C:\Users\jaume\OneDrive\Documentos\GitHub\Practica_02\Practica_02_WwiseProject\.cache\30\{30B193A4-0C23-E46A-57CC-E42C90022ECA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footseps\Footsteps_SFX\BAS_Player_Footstep_stone_run_03		26496
+	687794508	BAS_Player_Footstep_stone_run_02	C:\Users\jaume\OneDrive\Documentos\GitHub\Practica_02\Practica_02_WwiseProject\.cache\92\{926AF9F4-5B84-6297-808A-D0457F63456D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footseps\Footsteps_SFX\BAS_Player_Footstep_stone_run_02		25456
+	1019832389	BAS_Player_Footstep_stone_run_05	C:\Users\jaume\OneDrive\Documentos\GitHub\Practica_02\Practica_02_WwiseProject\.cache\21\{21FA25BE-E12A-48D1-9870-840CBEC56DF0}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footseps\Footsteps_SFX\BAS_Player_Footstep_stone_run_05		23270
+

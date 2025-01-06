@@ -1,0 +1,129 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{33ED97CE-7B9F-40EA-BED2-C933D7385B63}",
+    "Language": "SFX",
+    "Hash": "{EFB4AE80-4D96-142B-7A10-E8EEE0B98AEB}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "72997736",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps_SFX\\BAS_Player_Footstep_stone_run_04.wav",
+      "CachePath": "D9/{D96A6D05-16DC-2C3C-4862-B37CDB50838B}.wem"
+     },
+     {
+      "Id": "363988418",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps_SFX\\BAS_Player_Footstep_stone_run_06.wav",
+      "CachePath": "97/{97333E24-88AA-7628-E19B-1A7F8CB4A242}.wem"
+     },
+     {
+      "Id": "497032669",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps_SFX\\BAS_Player_Footstep_stone_run_01.wav",
+      "CachePath": "96/{96B36AAC-86F1-67EE-456B-50B5F3432F36}.wem"
+     },
+     {
+      "Id": "607709096",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps_SFX\\BAS_Player_Footstep_stone_run_03.wav",
+      "CachePath": "30/{30B193A4-0C23-E46A-57CC-E42C90022ECA}.wem"
+     },
+     {
+      "Id": "687794508",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps_SFX\\BAS_Player_Footstep_stone_run_02.wav",
+      "CachePath": "92/{926AF9F4-5B84-6297-808A-D0457F63456D}.wem"
+     },
+     {
+      "Id": "1019832389",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps_SFX\\BAS_Player_Footstep_stone_run_05.wav",
+      "CachePath": "21/{21FA25BE-E12A-48D1-9870-840CBEC56DF0}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2385628198",
+      "Name": "FootSteps",
+      "ObjectPath": "\\Events\\Default Work Unit\\FootSteps",
+      "GUID": "{5EC55E84-D9B8-4E13-B50D-B36ED2D44FA8}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.22741434",
+      "DurationMax": "0.34922567",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3865314626",
+         "Id": "841620460",
+         "GUID": "{A3A10FB2-D17C-48DA-A5B4-D235375BB5F2}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "72997736"
+         },
+         {
+          "Id": "363988418"
+         },
+         {
+          "Id": "497032669"
+         },
+         {
+          "Id": "607709096"
+         },
+         {
+          "Id": "687794508"
+         },
+         {
+          "Id": "1019832389"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3865314626",
+      "Name": "Material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material",
+      "GUID": "{EB19EEFF-5275-4089-9C90-053E4A0072C3}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "Concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Concrete",
+        "GUID": "{A3A10FB2-D17C-48DA-A5B4-D235375BB5F2}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4A4F7ED5-43F6-5FDB-985A-DA645321B45E}"
+ }
+}

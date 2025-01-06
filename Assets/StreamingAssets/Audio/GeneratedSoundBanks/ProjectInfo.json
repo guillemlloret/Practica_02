@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "Practica_02_WwiseProject",
+   "GUID": "{D424F6D9-BD3E-44A3-B6DF-34DF76177929}",
+   "Generator": "2024.1.1.8691"
+  },
+  "CacheRoot": "../../../../Practica_02_WwiseProject/.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{C20F6B00-16BE-4B43-948B-023F704E75C2}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "../../../../Practica_02_WwiseProject/GeneratedSoundBanks/Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{35CBA32B-3A8E-4FE8-A883-1490BBED9397}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "../../../../Practica_02_WwiseProject/GeneratedSoundBanks/Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{011756C1-882C-4585-AB5C-84D9AB8B592B}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{5AE4B5C2-26AC-553E-26FD-02D9ADD5A813}"
+ }
+}
