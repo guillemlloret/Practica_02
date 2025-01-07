@@ -53,7 +53,7 @@ public class InputController : MonoBehaviour
         {
             Debug.Log("Player cannot vanish yet.");
         }
-        //_canVanish = false;
+        _canVanish = false;
     }
 
     private void OnTriggerEnter(Collider other)
