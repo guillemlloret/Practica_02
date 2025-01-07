@@ -13,11 +13,13 @@ public class PlayerHealth : MonoBehaviour, ITakeDamage
     private bool _dead;
     public GameObject final;
     public Animator _animator;
+    public GameObject vignette;
     private void Start()
     {
         _currentHealth = _maxHealth;
         final.SetActive(false);
         _animator.SetBool("Die", false);
+        vignette.SetActive(false);  
     }
     public void TakeDamage(float amount)
     {
@@ -27,6 +29,11 @@ public class PlayerHealth : MonoBehaviour, ITakeDamage
       
 
         OnDamage?.Invoke(_currentHealth / _maxHealth);
+
+        if (_currentHealth <= 50)
+        {
+            vignette.SetActive(true);
+        }
 
         if (_currentHealth <= 0 && !_dead)
         {
