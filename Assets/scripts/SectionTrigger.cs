@@ -15,7 +15,7 @@ public class SectionTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Trigger"))
         {
-            if (player._currentHealth < 75 && player._currentHealth >40)
+            if (player._currentHealth < 100 && player._currentHealth >50)
             {
                 Debug.Log("sota 75");
                 stepCount += 1;

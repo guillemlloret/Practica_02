@@ -47,7 +47,7 @@ public class InputController : MonoBehaviour
         {
             _vanish = true; 
             invisible.SetActive(false);
-            
+
         }
         else
         {
