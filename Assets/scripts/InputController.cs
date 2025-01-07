@@ -18,8 +18,12 @@ public class InputController : MonoBehaviour
     public bool IsVanish => _IsVanish;
     private bool _canVanish;
     public bool CanVanish => _canVanish;
+    public GameObject invisible;
 
-    
+    private void Start()
+    {
+       invisible.SetActive(false);
+    }
 
     private void OnMove(InputValue value)
     {
@@ -41,14 +45,15 @@ public class InputController : MonoBehaviour
        
         if (_canVanish)
         {
-            _vanish = !_vanish; 
+            _vanish = true; 
+            invisible.SetActive(false);
             
         }
         else
         {
             Debug.Log("Player cannot vanish yet.");
         }
-        _canVanish = false;
+        //_canVanish = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -57,6 +62,7 @@ public class InputController : MonoBehaviour
         if (other.CompareTag("Chip"))
         {
             _canVanish = true;
+            invisible.SetActive(true);
             Debug.Log("Player can now vanish.");
         }
     }

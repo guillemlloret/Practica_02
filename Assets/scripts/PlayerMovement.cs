@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         _animator.SetBool("Jump", false);
         _animator.SetBool("Slide", false);
         _animatorSkin.SetBool("Vanish", false) ;
+        _animator.SetBool("Die", false);
 
       
     }

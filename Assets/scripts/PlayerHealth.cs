@@ -6,14 +6,18 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour, ITakeDamage
 {
     public float _currentHealth;
-    private float _maxHealth = 150;
+    public float _maxHealth = 150;
 
     public static Action OnDeath;
     public static Action<float> OnDamage;
     private bool _dead;
+    public GameObject final;
+    public Animator _animator;
     private void Start()
     {
         _currentHealth = _maxHealth;
+        final.SetActive(false);
+        _animator.SetBool("Die", false);
     }
     public void TakeDamage(float amount)
     {
@@ -33,7 +37,7 @@ public class PlayerHealth : MonoBehaviour, ITakeDamage
 
     private void Die()
     {
-        _dead = true;
-        OnDeath?.Invoke();
+        _animator.SetBool("Die", true);
+        final.SetActive(true);
     }
 }
